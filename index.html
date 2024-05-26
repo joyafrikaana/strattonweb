@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratton Oakmont Inc.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="artl.png" style="width:10%;"/>
+        <div class="logo">Stratton Oakmont Inc.</div>
+    </header>
+    <div class="top">
+        The world of investment can be a jungle. Bulls, bears, danger at every turn. That’s why we at Stratton Oakmont pride ourselves on being the best-trained professionals who guide you through the financial wilderness. Stratton Oakmont, stability, integrity, pride.
+    </div>
+    <div class="tickerheader">
+        Trending Memecoins
+    </div>
+    <div id="ticker-container">
+        <div id="ticker-wrapper">
+            <div id="ticker-section">
+                <!-- Ticker items will be dynamically inserted here -->
+            </div>
+            <div id="ticker-section-duplicate">
+                <!-- Duplicate ticker items for seamless scrolling -->
+            </div>
+        </div>
+    </div>
+    <div id="chart-section">
+        <div id="chart1" class="chart">
+            <div class="text-overlay">Biggest Memecoins on the Chain</div>
+            <iframe src="https://www.dextools.io/app/en/pair-explorer/0x1234567890abcdef1234567890abcdef12345678?theme=dark" frameborder="0"></iframe>
+        </div>
+        <div id="chart2" class="chart">
+            <iframe src="https://www.dextools.io/app/en/pair-explorer/0xabcdef1234567890abcdef1234567890abcdef12?theme=dark" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="tokenPrice.js"></script>
+</body>
+</html>
