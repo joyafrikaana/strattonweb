@@ -11,14 +11,20 @@ module.exports = async (req, res) => {
     }
 
     try {
-        const response = await axios.get(`https://public-api.dextools.io/trial/v2/pool/solana/AXTKvoNDZQ1hyg6HuuRnDohPaFtfxKaG8oDA21N12jhe`, {
+        const response = await axios.get(`https://public-api.dextools.io/trial/v2/pool/solana/AXTKvoNDZQ1hyg6HuuRnDohPaFtfxKaG8oDA21N12jhe/price`, {
             headers: {
                 'accept': 'application/json',
                 'X-API-Key': process.env.API_KEY
             }
         });
+        
         console.log('API response data:', response.data);
-        res.status(200).json(response.data);
+        
+        // Assuming the price information is within the data structure
+        // Adjust the following line based on the actual response structure
+        const tokenPrice = response.data.data.price;  // Adjust this line as per actual response structure
+        
+        res.status(200).json({ price: tokenPrice });
     } catch (error) {
         console.error('Error fetching token price:', error.message);
         if (error.response) {
